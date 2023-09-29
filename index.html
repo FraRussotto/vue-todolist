@@ -38,8 +38,8 @@
         <ul v-if="tasks.length > 0">
           <li v-for="(task, index) in tasks">
             <span
-            @click="isDone = !isDone"
-            :class="{'line-trough': isDone === true}">{{task.object}}</span>
+            @click="task.isDone = !task.isDone"
+            :class="{'line-trough': task.isDone}">{{task.object}}</span>
             <i @click="removeTask(index)" class="fa-solid fa-xmark"></i>
           </li>
         </ul>
