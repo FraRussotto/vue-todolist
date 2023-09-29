@@ -3,7 +3,8 @@ const { createApp } = Vue;
 createApp({
   data(){
 
-    return tasks = [
+    return{
+      tasks: [
       {
         object: 'commissione 1',
         isDone: false
@@ -19,8 +20,9 @@ createApp({
       {
         object: 'commissione 4',
         isDone: false
-      },
-    ]
-    
+      }
+      ],
+      counter: 0
+    }
   }
 }).mount('#app')

@@ -26,26 +26,14 @@
         <input type="text" placeholder="New Task" class="align-middle">
         <button class="btn btn-secondary mx-3">Aggiungi</button>
       </div>
-
       <div class="list_task mt-5">
-        <ul>
-          <li>
-            <span>Commissione 1</span>
-            <i class="fa-solid fa-xmark"></i>
-          </li>
-          <li>
-            <span>Commissione 2</span>
-            <i class="fa-solid fa-xmark"></i>
-          </li>
-          <li>
-            <span>Commissione 3</span>
-            <i class="fa-solid fa-xmark"></i>
-          </li>
-          <li>
-            <span>Commissione 4</span>
+        <ul v-if="tasks.length > 0">
+          <li v-for="task in tasks">
+            <span>{{task.object}}</span>
             <i class="fa-solid fa-xmark"></i>
           </li>
         </ul>
+        <h3 v-else>Sembra che tu non abbia nulla da fare, ma ne sei sicuro?</h3>
       </div>
 
     </div>
