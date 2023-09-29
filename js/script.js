@@ -30,7 +30,8 @@ createApp({
 
   methods:{
     generateTask(){
-      this.tasks.push(this.newTask);
+      console.log(this.addTask);
+      // this.tasks.push(this.addTask);
     }
   }
 
