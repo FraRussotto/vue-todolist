@@ -22,7 +22,16 @@ createApp({
         isDone: false
       }
       ],
-      counter: 0
+
+      counter: 0,
+      addTask: ''
+    }
+  },
+
+  methods:{
+    generateTask(){
+      this.tasks.push(this.newTask);
     }
   }
+
 }).mount('#app')

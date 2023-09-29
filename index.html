@@ -23,9 +23,16 @@
     <div class="container-md text-center">
       <img src="#" alt="" class="logo">Logo
       <div class="add_task">      
-        <input type="text" placeholder="New Task" class="align-middle">
-        <button class="btn btn-secondary mx-3">Aggiungi</button>
+        <input
+          v-model="addTask"
+          type="text" placeholder="New Task" 
+          class="align-middle"
+        >
+        <button 
+          @click="generateTask" 
+          class="btn btn-secondary mx-3">Aggiungi</button>
       </div>
+      
       <div class="list_task mt-5">
         <ul v-if="tasks.length > 0">
           <li v-for="task in tasks">
