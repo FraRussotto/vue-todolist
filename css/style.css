@@ -26,5 +26,9 @@ li i:hover{
 }
 
 li span:hover{
+  cursor: pointer;
+}
+
+.line-trough{
   text-decoration: line-through;
 }

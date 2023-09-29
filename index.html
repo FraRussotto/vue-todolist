@@ -29,15 +29,18 @@
           class="align-middle"
         >
         <button 
-          @click="generateTask" 
+          @click="generateTask()" 
           class="btn btn-secondary mx-3">Aggiungi</button>
+
       </div>
       
       <div class="list_task mt-5">
         <ul v-if="tasks.length > 0">
-          <li v-for="task in tasks">
-            <span>{{task.object}}</span>
-            <i class="fa-solid fa-xmark"></i>
+          <li v-for="(task, index) in tasks">
+            <span
+            @click="isDone = !isDone"
+            :class="{'line-trough': isDone === true}">{{task.object}}</span>
+            <i @click="removeTask(index)" class="fa-solid fa-xmark"></i>
           </li>
         </ul>
         <h3 v-else>Sembra che tu non abbia nulla da fare, ma ne sei sicuro?</h3>

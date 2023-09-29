@@ -30,9 +30,23 @@ createApp({
 
   methods:{
     generateTask(){
-      console.log(this.addTask);
-      // this.tasks.push(this.addTask);
+      this.tasks.push(
+        {
+          object: this.addTask,
+          isDone: false
+        }
+      )
+    },
+
+    removeTask(index){
+      this.tasks.splice(index, 1)
+    },
+
+    isDone(){
+      this.isDone = !this.isDone
+      console.log(this.isDone);
     }
   }
+
 
 }).mount('#app')
