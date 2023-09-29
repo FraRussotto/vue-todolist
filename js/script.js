@@ -7,7 +7,7 @@ createApp({
       tasks: [
       {
         object: 'commissione 1',
-        isDone: true
+        isDone: false
       },
       {
         object: 'commissione 2',
