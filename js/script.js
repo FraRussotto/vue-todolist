@@ -24,18 +24,23 @@ createApp({
       ],
 
       counter: 0,
-      addTask: ''
+      addTask: '',
+      isCorrect: true
     }
   },
 
   methods:{
     generateTask(){
-      this.tasks.unshift(
-        {
-          object: this.addTask,
-          isDone: false
-        }
-      )
+      if(this.addTask.length < 5) this.isCorrect = false
+      else{
+        this.tasks.unshift(
+          {
+            object: this.addTask,
+            isDone: false
+          })
+          this.addTask = '',
+          this.isCorrect = true
+      }
     },
 
     removeTask(index){

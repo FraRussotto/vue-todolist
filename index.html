@@ -30,7 +30,10 @@
         >
         <button 
           @click="generateTask()" 
-          class="btn btn-secondary mx-3">Aggiungi</button>
+          class="btn btn-secondary mx-3">Aggiungi
+        </button>
+
+        <p v-if="!isCorrect">La commissione deve essere di almeno 5 caratteri</p>
 
       </div>
       
