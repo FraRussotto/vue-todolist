@@ -30,7 +30,7 @@ createApp({
 
   methods:{
     generateTask(){
-      this.tasks.push(
+      this.tasks.unshift(
         {
           object: this.addTask,
           isDone: false
@@ -40,7 +40,6 @@ createApp({
 
     removeTask(index){
       if(this.tasks[index].isDone) this.tasks.splice(index, 1)
-
     },
   }
 
